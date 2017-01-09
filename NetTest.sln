@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetTools", "NetTest\NetTools.csproj", "{4E981067-6175-4122-9FC9-362BDAA08D17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetTest", "NetTest\NetTest.csproj", "{4E981067-6175-4122-9FC9-362BDAA08D17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetTools.Services", "NetTest.Services\NetTools.Services.csproj", "{3DAC5115-454B-43F2-847A-5FB8DB394DEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetTest.Services", "NetTest.Services\NetTest.Services.csproj", "{3DAC5115-454B-43F2-847A-5FB8DB394DEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -139,9 +139,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NetTest.Services\NetTools.Services.csproj">
+    <ProjectReference Include="..\NetTest.Services\NetTest.Services.csproj">
       <Project>{3dac5115-454b-43f2-847a-5fb8db394deb}</Project>
-      <Name>NetTools.Services</Name>
+      <Name>NetTest.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
