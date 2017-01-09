@@ -2,8 +2,23 @@
                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:local="clr-namespace:NetTest.ViewModel.Helpers"
                       Title="MainWindow"
                       Height="600"
-                      Width="800">
-    <Frame Source="ContinuousPing.xaml" />
+                      Width="800"
+                      DataContext="{StaticResource MainWindow}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="85*"/>
+        </Grid.ColumnDefinitions>
+        <TreeView ItemsSource="{Binding Views}">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Groups}" DataType="{x:Type local:IViewGroup}">
+                    <TreeViewItem Header="{Binding Label}" />
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+        <Frame Source="ICMP/ContinuousPing.xaml" Grid.Column="1"/>
+    </Grid>
 </controls:MetroWindow>

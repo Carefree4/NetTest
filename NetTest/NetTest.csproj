@@ -51,6 +51,10 @@
       <HintPath>..\packages\MahApps.Metro.1.4.1\lib\net45\MahApps.Metro.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Maps.MapControl.WPF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Maps.MapControl.WPF.1.0.0.3\lib\net40-Client\Microsoft.Maps.MapControl.WPF.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
@@ -84,9 +88,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="View\ContinuousPing.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="View\ICMP\ContinuousPing.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -100,9 +104,11 @@
     <Compile Include="Model\ModelBase.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\ContinuousPingViewModel.cs" />
+    <Compile Include="ViewModel\Helpers\IViewGroup.cs" />
+    <Compile Include="ViewModel\Helpers\ViewGroup.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Compile Include="View\ContinuousPing.xaml.cs">
+    <Compile Include="View\ICMP\ContinuousPing.xaml.cs">
       <DependentUpon>ContinuousPing.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainWindow.xaml.cs">

@@ -5,6 +5,7 @@
             <viewModel:ViewModelLocator xmlns:vm="clr-namespace:NetTest.ViewModel"
                            x:Key="Locator" />
             <viewModel:ContinuousPingViewModel x:Key="ContinuousPing"/>
+            <viewModel:MainViewModel x:Key="MainWindow"/>
             <ResourceDictionary.MergedDictionaries>
                 <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />

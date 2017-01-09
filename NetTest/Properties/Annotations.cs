@@ -722,7 +722,7 @@ namespace NetTest.Annotations
   public sealed class AspMvcPartialViewAttribute : Attribute { }
 
   /// <summary>
-  /// ASP.NET MVC attribute. Allows disabling inspections for MVC views within a class or a method.
+  /// ASP.NET MVC attribute. Allows disabling inspections for MVC Views within a class or a method.
   /// </summary>
   [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
   public sealed class AspMvcSuppressViewErrorAttribute : Attribute { }
