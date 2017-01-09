@@ -105,7 +105,9 @@
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\ContinuousPingViewModel.cs" />
     <Compile Include="ViewModel\Helpers\IViewGroup.cs" />
-    <Compile Include="ViewModel\Helpers\ViewGroup.cs" />
+    <Compile Include="ViewModel\Helpers\ViewGroup.cs">
+      <DependentUpon>IViewGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\ICMP\ContinuousPing.xaml.cs">

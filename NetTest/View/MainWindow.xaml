@@ -9,8 +9,9 @@
                       DataContext="{StaticResource MainWindow}">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="15*"/>
-            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
         <TreeView ItemsSource="{Binding Views}">
             <TreeView.ItemTemplate>
@@ -19,6 +20,7 @@
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
         </TreeView>
-        <Frame Source="ICMP/ContinuousPing.xaml" Grid.Column="1"/>
+        <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
+        <Frame Source="ICMP/ContinuousPing.xaml" Grid.Column="2"/>
     </Grid>
 </controls:MetroWindow>
