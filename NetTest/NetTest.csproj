@@ -100,9 +100,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Model\Interface.cs" />
     <Compile Include="Model\ModelBase.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Model\ContinuousPing.cs" />
     <Compile Include="ViewModel\ContinuousPingViewModel.cs" />
     <Compile Include="ViewModel\Helpers\IViewGroup.cs" />
     <Compile Include="ViewModel\Helpers\ViewGroup.cs">
