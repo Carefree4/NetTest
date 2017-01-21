@@ -3,17 +3,25 @@
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                       xmlns:local="clr-namespace:NetTest.ViewModel.Helpers"
+                      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
                       Title="MainWindow"
                       Height="600"
                       Width="800"
                       DataContext="{StaticResource MainWindow}">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="5" />
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
+        <!-- TODO: Try this: http://stackoverflow.com/a/4498006 -->
         <TreeView ItemsSource="{Binding Views}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectedItemChanged">
+                    <i:InvokeCommandAction Command="{Binding NavigateToPage}" CommandParameter="{Binding ElementName=treeView, Path=SelectedItem}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate ItemsSource="{Binding Groups}" DataType="{x:Type local:IViewGroup}">
                     <TreeViewItem Header="{Binding Label}" />
@@ -21,6 +29,13 @@
             </TreeView.ItemTemplate>
         </TreeView>
         <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
-        <Frame Source="ICMP/ContinuousPing.xaml" Grid.Column="2"/>
+        <Frame 
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch"
+            Source="{Binding CurrentPageSource}"
+            Grid.Column="2"
+            Margin="0,0,0,0"/>
     </Grid>
 </controls:MetroWindow>

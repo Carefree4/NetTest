@@ -92,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\ICMP\Traceroot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -112,6 +116,9 @@
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\ICMP\ContinuousPing.xaml.cs">
       <DependentUpon>ContinuousPing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ICMP\Traceroot.xaml.cs">
+      <DependentUpon>Traceroot.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

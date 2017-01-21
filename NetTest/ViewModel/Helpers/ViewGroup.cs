@@ -20,7 +20,7 @@ namespace NetTest.ViewModel.Helpers
         public string Label { get; }
         public List<IViewGroup> Groups { get; }
 
-        private enum GroupIndex
+        public enum GroupIndex
         {
             Icmp = 0
         }
@@ -33,7 +33,8 @@ namespace NetTest.ViewModel.Helpers
             };
             // Views
             // ICMP
-            viewGroup[(int) GroupIndex.Icmp].Groups.Add(new ViewGroup("Continuous Ping", "ICMP/ContinuousPing.xaml"));
+            viewGroup[(int)GroupIndex.Icmp].Groups.Add(new ViewGroup("Continuous Ping", "ICMP/ContinuousPing.xaml"));
+            viewGroup[(int)GroupIndex.Icmp].Groups.Add(new ViewGroup("Traceroot", "ICMP/Traceroot.xaml"));
 
             return viewGroup;
         }
